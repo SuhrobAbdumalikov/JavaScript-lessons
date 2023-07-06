@@ -24,8 +24,9 @@ function addTodo({id,title,isFinished}) {
    let addingTodo = todo.fill((value) =>  value.id&&value.title&&value.isFinished)
    return addingTodo
 }
-// function changeStatus() {
-// }
+function changeStatus() {
+    
+}
 // function deleteTodo() {
 //     const deleteTodo = todo.filter((item) => item.id==id)
 //     return deleteTodo

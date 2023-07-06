@@ -1,27 +1,27 @@
 'use strict'
 
 // high order function
-const arr = [1,2,3,4,5]
+// const arr = [1,2,3,4,5]
 
-function qoshish(value) {
-    return value+2
-}
+// function qoshish(value) {
+//     return value+2
+// }
 
-function ayirish(value) {
-    return value-2
-}
+// function ayirish(value) {
+//     return value-2
+// }
 
-function kopaytirish(value) {
-    return value*2
-}
+// function kopaytirish(value) {
+//     return value*2
+// }
 
-function customMap(callbackfunction) {
-    const res = []
-    for (let i = 0; i < array.length; i++) {
-        res.push(callbackfunction(this[i]))        
-    }
-    return res
-}
+// function customMap(callbackfunction) {
+//     const res = []
+//     for (let i = 0; i < array.length; i++) {
+//         res.push(callbackfunction(this[i]))        
+//     }
+//     return res
+// }
 
 // ?Array.prototype.customMap = customMa
 
@@ -37,19 +37,19 @@ function customMap(callbackfunction) {
 
 
 //masala.
-// const arr = [1,1,1,2,2,3,5,5,5,5]
+const arr = [1,1,1,2,2,3,5,5,5,5]
 
-// const map = new Map()
+const map = new Map()
 
-// for (const el of arr) {
-//     map.set(el, map.get(el)+1 || 1)
-// }
+for (const el of arr) {
+    map.set(el, map.get(el)+1 || 1)
+}
 
-// const unic = new Set(map.values())
+const unic = new Set(map.values())
 // console.log(map.keys());
 // console.log(unic.values());
 
-// console.log(unic.size === map.size);
+console.log(unic.size === map.size);
 
 
 
@@ -111,3 +111,13 @@ function customMap(callbackfunction) {
 //     return acc
 // },[] )
 //  console.log(army); 
+
+
+// function mapBully(someMap){
+//     if(map.containsKey('a')){
+//         map.put('b',map.get('a'))
+//         map.put('a','')
+//       }
+//       return map
+//   }
+//   mapBully('carrot')
