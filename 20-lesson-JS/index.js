@@ -45,3 +45,42 @@
 //     return [` Yutganlar: ${[arr1]}`,`1 marta Mag'lub bolganlar:${[arr2]}`] 
 // }
 // console.log(winAndDefeat(matches)); 
+
+
+//masala 1-usul
+// const arr = ['kiyik','olam','hayot','kak']
+// function foo(param){
+//     let newStr=""
+//     for (let i=param.length-1; i>=0; i--) {
+//         newStr+=param[i]
+//     }
+//     return newStr===param
+// }
+
+// let count = 0;
+//     for (let i of arr) {
+//         if (foo(i)) {
+//             count++
+//         }
+//     }
+// console.log(count);
+
+
+//2-usul
+// const arr = ['kiyik','olam','hayot','kak']
+// const arr1 = ['kiyik','olam','hayot','kak']
+
+// let count = 0;
+// function foo(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         let reverStr = arr[i].split("")
+//         console.log(reverStr);
+//         if (arr[i]===reverStr.reverse()) { 
+//             count++;
+//         }        
+//     }
+//     return count
+// }
+// console.log(foo(count));
+
+
