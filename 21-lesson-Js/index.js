@@ -1,25 +1,40 @@
 //21 lesson Js
 // scobelar,functions,this
 
-// function showinfo() {
+function showinfo() {
+  console.log(`Muallifi:${this.author} \nKitob Nomi:${this.bookName}`);
+}
+// showinfo()
 
-// }
+const book1 = {
+  author: "Abdulla Qodiriy",
+  bookName: 'O"tgan kunlar',
+  // showinfo(){
+  //     console.log(`Muallifi:${this.author} \nKitob Nomi:${this.bookName}`)
+  // }
+};
 
-// const book1 = {
-//     author: 'Abdulla Qodiriy',
-//     bookName: 'O"tgan kunlar',
-//     showinfo(){
-//         console.log(`Muallifi:${book1.author} \nKitob Nomi:${book1.bookName}`)
-//     }
-// }
+const book2 = {
+  author: "Alisher Navoiy",
+  bookName: "Xamsa",
+  // showinfo(){
+  //     console.log(`Muallifi:${this.author} \nKitob Nomi:${this.bookName}`)
+  // }
+};
+const book3 = {
+  author: "Xudoyberdi Tuxtaboyes",
+  bookName: "Sariq Devni minib",
+  // showinfo(){
+  //     console.log(`Muallifi:${this.author} \nKitob Nomi:${this.bookName}`)
+  // }
+};
+// book1.showinfo()
+// book2.showinfo()
 
-// const book2 = {
-//     author: 'Alisher Navoiy',
-//     bookName: 'Xamsa',
-//     showinfo(){
-//         console.log(`Muallifi:${book2.author} \nKitob Nomi:${book2.bookName}`)
-//     }
-// }
+showinfo.call(book1);
+showinfo.apply(book2);
+const newShowinfo = showinfo.bind(book3); // faqat bind yangi ozgaruvchiga yuklab chiqaramiz chunki call va apply funcsiyani ozini qaytaradi bind esa yangi ozgarishlarni yangi funksiyaga yuklab jonatadi
+newShowinfo();
 
 //============================================================================================================>>
 
@@ -118,7 +133,7 @@
 // }
 
 
-//masala 
+//masala
 // const str = 'daabcbaabcbc'
 // const part = 'abc'
 // function foo(str) {
@@ -139,9 +154,17 @@
 
 
 //masala
-const text = 'a1b1c1'
-function foo(){
-    const res = text.match(/[a-z]/gi).length
-    return 2**res
-}
-console.log(foo());
+// const text = 'a1b1c1'
+// function foo(){
+//     const res = text.match(/[a-z]/gi).length
+//     return 2**res
+// }
+// console.log(foo());
+
+// var x =10;
+// function foo() {
+//     console.log(x);
+//     var x =5
+//     console.log(x);
+// }
+// foo() result==>5
