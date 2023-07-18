@@ -93,9 +93,4 @@ User.AddReservedBooks = {
     bookName:'Sariq devni minib',
     bookAuthor:'Xudoyberdi Toxtaboyev'
 }
-
-User.TakeBooks = {
-    id:1.23456789,
-    reservedDate:22,
-}
 console.log(User.AllBookedLists);
