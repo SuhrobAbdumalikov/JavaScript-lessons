@@ -1,1 +1,91 @@
-/*# sourceMappingURL=styleMenu.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: white;
+}
+
+.container {
+  background-image: url("../images/main-img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: -2;
+}
+.container h1 {
+  position: absolute;
+  left: 20%;
+  top: 40%;
+  color: yellow;
+  font-family: "Lobster", cursive;
+  font-size: 100px;
+}
+.container aside {
+  width: 0%;
+  height: 100vh;
+  background-color: black;
+  position: absolute;
+  z-index: 5;
+  overflow: hidden;
+  transition: all 0.5s ease-out;
+}
+.container aside h3 {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+  color: yellow;
+  font-size: 50px;
+  font-family: "Lobster", cursive;
+}
+.container aside ul {
+  display: grid;
+  -moz-column-gap: 90px;
+       column-gap: 90px;
+  row-gap: 25px;
+  grid-template-columns: auto auto auto;
+  place-content: center;
+  align-items: baseline;
+}
+.container aside ul li {
+  border: 3px solid yellow;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 10px 5px yellow;
+}
+.container aside ul li img {
+  border-radius: 10px;
+  width: 360px;
+  height: 196px;
+}
+.container aside ul li h2 {
+  font-family: "Lugrasimo", cursive;
+  color: yellow;
+}
+.container aside ul li p {
+  font-family: "Lugrasimo", cursive;
+  margin-bottom: 5px;
+}
+.container aside ul li p span {
+  color: red;
+  font-family: "Lugrasimo", cursive;
+}
+.container aside ul li button {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: white;
+  color: black;
+  font-weight: 900;
+  border: 2px solid yellow;
+  border-radius: 3px;
+}
+.container .active {
+  width: 100%;
+}/*# sourceMappingURL=styleMenu.css.map */
