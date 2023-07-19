@@ -11,10 +11,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 1s ease;
 }
 .container .sliderImages {
   width: 800px;
   height: 500px;
+  transition: all 1s ease;
 }
 .container .sliderImages img {
   width: 100%;
