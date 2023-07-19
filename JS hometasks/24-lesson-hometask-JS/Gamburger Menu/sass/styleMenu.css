@@ -14,7 +14,13 @@
   width: 100%;
   height: 100vh;
   position: relative;
-  z-index: -2;
+}
+.container i {
+  position: absolute;
+  z-index: 15;
+  top: 30px;
+  left: 10px;
+  color: yellow;
 }
 .container h1 {
   position: absolute;
@@ -85,6 +91,10 @@
   font-weight: 900;
   border: 2px solid yellow;
   border-radius: 3px;
+  transition: all 0.5s ease;
+}
+.container aside ul li button:hover {
+  background-color: yellow;
 }
 .container .active {
   width: 100%;
