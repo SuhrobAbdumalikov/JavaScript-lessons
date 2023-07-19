@@ -33,7 +33,7 @@
 .container aside {
   width: 0%;
   height: 100vh;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
   z-index: 5;
   overflow: hidden;
