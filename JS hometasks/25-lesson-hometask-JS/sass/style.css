@@ -2,30 +2,96 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+}
+body .btn {
+  background-color: yellow;
+  color: black;
+  padding: 8px 20px;
+  border-radius: 10px;
+  margin-left: 700px;
+  transition: all 0.5s ease;
+}
+body .btn:hover {
+  opacity: 0.8;
+}
+body .btn:active {
+  transform: scale(0.9);
 }
 
 .container {
   background-color: black;
   width: 100%;
-  height: 100vh;
+  height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 30px;
 }
-.container .box {
+.container .usersContent {
   background-color: purple;
+  width: 250px;
+  border-radius: 10px;
+}
+.container .usersContent .box {
   color: white;
+  padding: 20px 25px 0px 25px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
-.container .box .avatar {
-  width: 70px;
-  height: 70px;
+.container .usersContent .box .avatar {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   margin: 0 auto;
+  border: 7px solid purple;
+  outline: 3px solid yellow;
 }
-.container .box .avatar img {
+.container .usersContent .box .avatar img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+}
+.container .usersContent .box h3 {
+  font-size: 25px;
+  margin-top: 10px;
+  color: yellow;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.container .usersContent .box a {
+  text-decoration: none;
+  color: white;
+}
+.container .usersContent .box button {
+  background-color: yellow;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: all 1s ease;
+}
+.container .usersContent .box button:hover {
+  transform: scale(1.07);
+}
+.container .usersContent .box button a {
+  color: black;
+  font-weight: 700;
+}
+.container .usersContent span {
+  font-size: 12px;
+  margin-bottom: 3px;
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */

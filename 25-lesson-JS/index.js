@@ -134,11 +134,11 @@
 // }
 
 
-// function editUsers() {
-//     const editUserIdx = users.findIndex((user) => user.id === id)
-//     users[editUserIdx] = {
-//         ...users[editUserIdx],name,email,phone,
-//     } 
-//     render(users)
-// }
-// filter()
+function editUsers() {
+    const editUserIdx = users.findIndex((user) => user.id === id)
+    users[editUserIdx] = {
+        ...users[editUserIdx],name,email,phone,
+    } 
+    render(users)
+}
+filter()
