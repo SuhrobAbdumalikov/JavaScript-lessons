@@ -4270,6 +4270,9 @@ select.addEventListener("change", (e) => {
   }
 });
 
+
+
+
 function reder() {
   result.textContent = "";
   if (!filterData.length) {
@@ -4279,6 +4282,8 @@ function reder() {
     const container = document.createElement("div");
     container.classList.add("box");
     container.textContent = item.catalogCard.title;
+    // container.textContent = item.catalogCard.minFullPrice
+    // container.textContent = item.catalogCard.photos[0].link.high
     result.appendChild(container);
   });
 }
