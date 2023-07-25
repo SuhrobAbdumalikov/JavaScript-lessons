@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* #custom-menu{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        } */
+        body{
+            background-color: #282424;
+        }
+      #context {
+        width: 800px;
+        background-color: orange;
+        font-size: 20px;
+        margin: 50px auto;
+        overflow-wrap: break-word;
+        padding: 10px;
+        letter-spacing: 5px;
+        word-spacing: 15px;
+      }
+      #container {
+        padding: 20px;
+        width: max-content;
+        margin: 0 auto;
+        border-radius: 20px;
+        background-color: black;
+      }
+      .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 40px 0;
+        gap: 20px;
+      }
+      span {
+        width: 45px;
+        height: 35px;
+        background-color: red;
+        padding: 10px 20px;
+        text-align: center;
+        border-radius: 10px;
+        cursor: pointer;
+        display: grid;
+        place-content: center;
+        font-weight: 700;
+      }
+      span.active {
+        background-color: rgb(81, 81, 184);
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>bir marta bos</h1> -->
+    <!-- <div id="custom-menu" hidden></div> -->
+    <h1 id="context"></h1>
+    <div id="container"></div>
+    <script src="./index.js"></script>
+  </body>
+</html>
