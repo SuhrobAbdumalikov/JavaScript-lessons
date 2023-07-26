@@ -67,6 +67,7 @@ timer.textContent = `${count}s`;
 selectTime.addEventListener("change", (e) => {
   count = e.target.value * 1 * 60;
   // console.log(count);
+  
   timer.textContent = `${count}s`;
 });
 
