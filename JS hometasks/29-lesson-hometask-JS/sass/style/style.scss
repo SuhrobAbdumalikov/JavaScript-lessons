@@ -1,0 +1,274 @@
+@import "../global";
+
+.container {
+  background: rgb(54, 5, 217);
+  background: linear-gradient(
+    90deg,
+    rgba(54, 5, 217, 1) 0%,
+    rgba(164, 84, 224, 1) 53%,
+    rgba(247, 10, 242, 1) 93%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  height: 100vh;
+
+  h1 {
+    color: white;
+    font-size: 40px;
+    text-shadow: 10px 7px 5px rgb(0, 0, 0, 0.7);
+  }
+
+  main {
+    width: 920px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 7px #00000029;
+    // background-color: #82888a;
+    height: max-content;
+    border: 1px solid #ffffff80;
+    border-top: none;
+    background-image: url(https://www.typingtest.com/forms/img/center-back.svg);
+    border-radius: 15px;
+    padding-top: 45px;
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+
+    h1 {
+      font-size: 40px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #d9eef3;
+      // color:blue;
+      margin-bottom: 20px;
+    }
+
+    .time {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+
+      svg {
+        width: 35px;
+        fill: #d9eef3;
+      }
+
+      select {
+        background-color: yellow;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 312px;
+        height: 49px;
+        box-shadow: 2px 2px 4px #0000001a;
+        border-radius: 50px;
+        font-size: 20px;
+        outline: none;
+        color: black;
+        padding-left: 15px;
+        border: none;
+        display: inline-block;
+        text-decoration: none;
+        line-height: 49px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        option {
+          all: unset;
+          padding: 10px 20px;
+          color: #777;
+          margin: 10px 0;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      margin: 35px auto 0px;
+      font-size: 17px;
+      text-transform: uppercase;
+    //   background: #15c39a 0% 0% no-repeat padding-box;
+      box-shadow: 2px 2px 4px #0000001a;
+      border: 1px solid #93f8e0;
+      border-radius: 20px;
+      width: 140px;
+      height: 40px;
+      line-height: 38px;
+      cursor: pointer;
+      color: #fff;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    h4 {
+      color: #383b3c;
+      text-align: center;
+      font-size: 16px;
+      position: relative;
+      width: 400px;
+      margin: 30px auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      img {
+        width: 40px;
+      }
+    }
+  }
+
+  .typingBox {
+    position: absolute;
+    // background-color: #fff;
+    transition: all 0.4s ease-in-out;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+
+    .time {
+      margin-left: 540px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      font-weight: 700;
+      margin-bottom: 10px;
+      background-color: red;
+      color: white;
+      padding: 7px;
+      border-radius: 20px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    .maintxt {
+      width: 630px;
+      height: 130px;
+      font-size: 20px;
+      padding: 70px 0;
+      text-align: center;
+      border: 3px solid blue;
+      border-right: none;
+      border-left: none;
+      border-radius: 25px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color:white;
+    }
+
+    textarea {
+      resize: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 500px;
+      height: 100px;
+      margin: 0 auto;
+      background-color: yellow;
+      color: black;
+      border: none;
+      outline: none;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    .btns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    button {
+      cursor: pointer;
+      width: 150px;
+      margin: 30px 0 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 0px;
+      border-radius: 30px;
+      border: none;
+      background-color: blue;
+      color: white;
+      font-size: 16px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+      transition: all 0.2s ease;
+      &:active {
+        transform: scale(0.95);
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: red;
+    }
+    .result {
+      text-align: center;
+      display: none;
+
+      .resultContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .res {
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+      }
+      .Accuracy {
+        background-color: rgb(219, 219, 10);
+      }
+      .Mistakes {
+        background-color: red;
+      }
+      .correct {
+        background-color: green;
+      }
+    }
+    .success {
+      color: lawngreen;
+      text-decoration:underline;
+      // color:green;
+    }
+    .fail {
+      // background-color: red;
+      // border-radius:10px;
+      color: red;
+      text-decoration: underline;
+    }
+  }
+}

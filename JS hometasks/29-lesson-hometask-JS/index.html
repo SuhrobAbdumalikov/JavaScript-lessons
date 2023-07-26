@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sass/style/style.css" />
+    <title>Speed Typing | Test</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <h1>Typing Test Game</h1> -->
+      <main>
+        <h1>Check your typing skills</h1>
+        <h3>Type away to join 150+ million test takers!</h3>
+        <p>SELECT YOUR TEST</p>
+        <div class="time">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"
+            />
+          </svg>
+          <select id="selectTime">
+            <span>aa</span>
+            <option value="0.2">20 Seconds Test</option>
+            <option value="0.5">30 Seconds Test</option>
+            <option value="1">1 Minute Test</option>
+            <option value="2">2 Minute Test</option>
+            <option value="3">3 Minute Test</option>
+          </select>
+        </div>
+        <div class="time">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <path
+              d="M64 464c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16H224v80c0 17.7 14.3 32 32 32h80V448c0 8.8-7.2 16-16 16H64zM64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0H64zm56 256c-13.3 0-24 10.7-24 24s10.7 24 24 24H264c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24H264c13.3 0 24-10.7 24-24s-10.7-24-24-24H120z"
+            />
+          </svg>
+          <select id="selectText">
+            <option value="easy">Easy Text</option>
+            <option value="medium">Medium Text</option>
+            <option value="hard">Hard Text</option>
+          </select>
+        </div>
+        <a id="start">START TEST</a>
+        <h4>
+          You voted - and we switched to the dark style ...
+          <img src="images/ninja.png" alt="ninja" loading="lazy" />
+        </h4>
+      </main>
+      <div class="typingBox">
+        <div class="time">
+          <p>Time: <span id="timer"></span></p>
+        </div>
+        <div class="maintxt">
+          <p class="main-text" id="mainText"></p>
+        </div>
+        <textarea
+          id="textareaUser"
+          disabled
+          placeholder="Start typing here..."
+        ></textarea>
+        <div class="btns">
+          <button type="submit" id="btnStart">Start Game</button>
+          <button type="submit" id="btnChangeText">Stop Game</button>
+        </div>
+        <div class="result" id="result">
+          <h3>---------- Result! ----------</h3>
+          <div class="resultContainer">
+            <div class="Accuracy res">
+              <p>Accuracy: <span>0%</span></p>
+            </div>
+            <div class="Mistakes res">
+              <p>Mistakes: <span>0</span></p>
+            </div>
+            <div class="correct res">
+              <p>Correct: <span>0</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
