@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Timer | JS</title>
+  </head>
+  <body>
+    <input type="number" id="hourEnter" max="23" min="0" value="0" />
+    <label for="hour">Hour</label>
+    <input type="number" id="minEnter" max="59" min="0" value="0" />
+    <label for="min">Minute</label>
+    <input type="number" id="secondEnter" max="59" min="0" value="0" />
+    <label for="second">Seconds</label>
+    <div class="timerContainer">
+      <div class="time">
+        <h2 class="hour">00</h2>
+        <!-- <p>Hour</p> -->
+      </div>
+      <span>:</span>
+      <div class="time">
+        <h2 class="minute">00</h2>
+        <!-- <p>Minute</p> -->
+      </div>
+      <span>:</span>
+      <div class="time">
+        <h2 class="seconds">00</h2>
+        <!-- <p>Seconds</p> -->
+      </div>
+      <button class="start">Start</button>
+      <button class="Reset">Reset</button>
+      <button class="Pause">Pause</button>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

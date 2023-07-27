@@ -11,12 +11,11 @@ const typingBox = document.querySelector(".typingBox");
 const start = document.querySelector("#start");
 const main = document.querySelector("main");
 const selectTime = document.querySelector("#selectTime");
-const selectText = document.querySelector('#selectText');
-const playGame = document.querySelector('.playGame');
-const startAgain = document.querySelector('#startAgain');
+const selectText = document.querySelector("#selectText");
+const playGame = document.querySelector(".playGame");
+const startAgain = document.querySelector("#startAgain");
 
-
-let currentText = 0
+var currentText = "0";
 const allTexts = [
   {
     id: 1,
@@ -28,23 +27,26 @@ const allTexts = [
   },
   {
     id: 3,
-    text:   "Those cowbells are nothing more than elements. This could be, or perhaps before stockings, thoughts were only opinions. A coil of the exclamation is assumed to be a hurtless toy. A board is the cast of a religion. In ancient times the first stinko sailboat is, in its own way, an exchange. Few can name a tutti channel that isn't a footless operation. Extending this logic, an oatmeal is the rooster of a shake. Those step-sons are nothing more than matches.",
+    text: "Those cowbells are nothing more than elements. This could be, or perhaps before stockings, thoughts were only opinions. A coil of the exclamation is assumed to be a hurtless toy. A board is the cast of a religion. In ancient times the first stinko sailboat is, in its own way, an exchange. Few can name a tutti channel that isn't a footless operation. Extending this logic, an oatmeal is the rooster of a shake. Those step-sons are nothing more than matches.",
   },
 ];
 
+selectText.addEventListener("change", (e) => {
+  currentText = e.target.value;
+  // console.log(currentText);
+});
 
 //textni ozgartirish funksiyasi
-function StopText() {}
-btnChangeText.addEventListener("click", () => {});
+// function StopText() {}
+// btnChangeText.addEventListener("click", () => {});
 
 // text ning xar bit xarifini olish uchun
-let text = "";
-text = allTexts[currentText].text;
-let arr = text.split("").map((value) => {
-  return "<span class='text-chars'>" + value + "</span>";
-});
-mainText.innerHTML += arr.join("");
-
+// let text = "";
+// let text = allTexts[Number(currentText)].text;
+// let arr = text.split("").map((value) => {
+//   return "<span class='text-chars'>" + value + "</span>";
+// });
+// mainText.innerHTML += arr.join("");
 
 let incorrectLetters = 0;
 //sozlarni hioblovchi funksiya
@@ -76,9 +78,9 @@ selectTime.addEventListener("change", (e) => {
   timer.textContent = `${count}s`;
 });
 
-const option = document.querySelector('#option');
-const medium = document.querySelector('#medium');
-const easy = document.querySelector('#easy');
+const option = document.querySelector("#option");
+const medium = document.querySelector("#medium");
+const easy = document.querySelector("#easy");
 // medium.textContent = allTexts[currentText+1].text
 // var textoption = allTexts[currentText].text
 // mainText.textContent = textoption;
@@ -96,60 +98,81 @@ const easy = document.querySelector('#easy');
 //   }
 // })
 
-
+function stop() {
+  clearInterval(inter);
+}
 
 function CountTime() {
   function intervalOwn() {
     if (count > 0) {
       count--;
     } else if (count === 0) {
-      let texta = allTexts[currentText].text
-        // "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit sapiente inventore aperiam nesciunt voluptatibus ducimus perferendis quis, numquam impedit harum.";
+      let texta = allTexts[currentText].text;
+      // "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit sapiente inventore aperiam nesciunt voluptatibus ducimus perferendis quis, numquam impedit harum.";
       let counterr = 0;
 
       for (let i = 0; i < typetext.length; i++) {
         if (texta[i] !== typetext[i]) counterr++;
       }
-      result.style.opacity = 1
-      result.style.pointerEvents = 'auto'
-      btnChangeText.style.display = 'none'
-      btnStart.style.display = 'initial'
-      typingBox.style.display = 'none';
-      accuracy.innerHTML = `(${100-(Math.floor((counterr / 169) * 100))})%`;
+      result.style.opacity = 1;
+      result.style.pointerEvents = "auto";
+      btnChangeText.style.display = "none";
+      btnStart.style.display = "initial";
+      typingBox.style.display = "none";
+      accuracy.innerHTML = `(${100 - Math.floor((counterr / 169) * 100)})%`;
       mistakes.innerHTML = `${counterr} ta`;
       correct.innerHTML = `${169 - counterr} ta`;
 
-      console.log(counterr);
-      clearInterval(inter);
+      // console.log(counterr);
+      // clearInterval(inter);
+      stop();
       textareaUser.setAttribute("disabled", "");
     }
     timer.textContent = `${count}s`;
   }
+  btnChangeText.addEventListener("click", () => {
+    // clearInterval(inter);
+    // result.style.display = 'initial'
+    btnStart.style.display = "initial";
+    result.style.opacity = 1;
+    result.style.pointerEvents = "auto";
+    // playGame.style.display = 'none'
+    typingBox.style.display = "none";
+    // stop();
+    // result.style.opacity = 1;
+    // result.style.pointerEvents = "auto";
+    // btnChangeText.style.display = "none";
+    // btnStart.style.display = "initial";
+    // typingBox.style.display = "none";
+    // accuracy.innerHTML = `(${100 - Math.floor((counterr / 169) * 100)})%`;
+    // mistakes.innerHTML = `${counterr} ta`;
+    // correct.innerHTML = `${169 - counterr} ta`;
+  });
   let inter = setInterval(intervalOwn, 1000);
 }
-
 
 btnStart.addEventListener("click", () => {
   CountTime();
   textareaUser.removeAttribute("disabled");
-  textareaUser.style.backgroundColor = 'yellow';
-  btnChangeText.style.display = 'initial'
-  btnStart.style.display = 'none'
-  accuracy.innerHTML = `(${100-(Math.floor((counterr / 169) * 100))})%`;
+  textareaUser.style.backgroundColor = "yellow";
+  btnChangeText.style.display = "initial";
+  btnStart.style.display = "none";
+  accuracy.innerHTML = `(${100 - Math.floor((counterr / 169) * 100)})%`;
   mistakes.innerHTML = `${counterr} ta`;
   correct.innerHTML = `${169 - counterr} ta`;
   // btnStart.textContent = 'Stop Game';
 });
 
-btnChangeText.addEventListener('click',() =>{
-  // result.style.display = 'initial'
-  btnStart.style.display = 'initial'
-  result.style.opacity = 1
-  result.style.pointerEvents = 'auto'
-  // playGame.style.display = 'none'
-  typingBox.style.display = 'none';
-})
-
+// btnChangeText.addEventListener("click", () => {
+//   // clearInterval(inter);
+//   // result.style.display = 'initial'
+//   btnStart.style.display = "initial";
+//   result.style.opacity = 1;
+//   result.style.pointerEvents = "auto";
+//   // playGame.style.display = 'none'
+//   typingBox.style.display = "none";
+//   // stop();
+// });
 
 var typetext = "";
 textareaUser.addEventListener("input", (e) => {
@@ -162,19 +185,20 @@ textareaUser.addEventListener("input", (e) => {
 //=======================================================================================>>
 
 start.addEventListener("click", () => {
+  let text = allTexts[Number(currentText)].text;
+  let arr = text.split("").map((value) => {
+    return "<span class='text-chars'>" + value + "</span>";
+  });
+  mainText.innerHTML += arr.join("");
   // main.style.display = "none";
   main.style.opacity = 0;
-  main.style.pointerEvents = 'none';
+  main.style.pointerEvents = "none";
   typingBox.style.opacity = 1;
   typingBox.style.pointerEvents = "auto";
 });
 
+startAgain.addEventListener("click", () => {
+  window.location.reload();
+});
 
-startAgain.addEventListener('click',() =>{
-  // result.style.opacity = 0
-  // result.style.pointerEvents = 'none';
-  // result.style.display = 'none';
-  // main.style.display = 'initial';
-  // main.style.opacity = 1
-  // main.style.pointerEvents = 'auto';
-})
+document.addEventListener("click", () => textareaUser.focus());
