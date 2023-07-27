@@ -38,6 +38,9 @@
   flex-direction: column;
   color: #fff;
   text-align: center;
+  opacity: 1;
+  pointer-events: "auto";
+  transition: all 0.5s ease;
 }
 .container main h1 {
   font-size: 40px;
@@ -60,9 +63,11 @@
   gap: 15px;
   margin-bottom: 20px;
 }
-.container main .time svg {
-  width: 35px;
-  fill: #d9eef3;
+.container main .time i {
+  font-size: 40px;
+}
+.container main .time #i {
+  font-size: 47px;
 }
 .container main .time select {
   background-color: yellow;
@@ -168,13 +173,14 @@
   width: 500px;
   height: 100px;
   margin: 0 auto;
-  background-color: yellow;
+  background-color: rgb(212, 212, 104);
   color: black;
   border: none;
   outline: none;
   padding: 10px;
   border-radius: 10px;
   font-size: 16px;
+  transition: all 0.3s ease-in-out;
 }
 .container .typingBox .btns {
   display: flex;
@@ -204,35 +210,8 @@
 .container .typingBox button:hover {
   opacity: 0.7;
 }
-.container .typingBox h3 {
-  text-align: center;
-  margin-bottom: 10px;
-  color: red;
-}
-.container .typingBox .result {
-  text-align: center;
+.container .typingBox #btnChangeText {
   display: none;
-}
-.container .typingBox .result .resultContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-}
-.container .typingBox .result .res {
-  color: white;
-  padding: 5px 10px;
-  border-radius: 20px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
-}
-.container .typingBox .result .Accuracy {
-  background-color: rgb(219, 219, 10);
-}
-.container .typingBox .result .Mistakes {
-  background-color: red;
-}
-.container .typingBox .result .correct {
-  background-color: green;
 }
 .container .typingBox .success {
   color: lawngreen;
@@ -241,4 +220,67 @@
 .container .typingBox .fail {
   color: red;
   text-decoration: underline;
+}
+.container .result {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: all 0.4s ease-in-out;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+}
+.container .result h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: white;
+}
+.container .result .resultContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.container .result .res {
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+.container .result #startAgain {
+  text-align: center;
+  cursor: pointer;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0px;
+  border-radius: 30px;
+  border: none;
+  background-color: blue;
+  color: white;
+  font-size: 16px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
+}
+.container .result #startAgain:active {
+  transform: scale(0.95);
+}
+.container .result #startAgain:hover {
+  opacity: 0.7;
+}
+.container .result .Accuracy {
+  background-color: rgb(219, 219, 10);
+}
+.container .result .Mistakes {
+  background-color: red;
+}
+.container .result .correct {
+  background-color: green;
 }/*# sourceMappingURL=style.css.map */

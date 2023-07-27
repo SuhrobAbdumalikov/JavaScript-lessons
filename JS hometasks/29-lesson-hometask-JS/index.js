@@ -11,8 +11,12 @@ const typingBox = document.querySelector(".typingBox");
 const start = document.querySelector("#start");
 const main = document.querySelector("main");
 const selectTime = document.querySelector("#selectTime");
+const selectText = document.querySelector('#selectText');
+const playGame = document.querySelector('.playGame');
+const startAgain = document.querySelector('#startAgain');
 
-let currentText = 1
+
+let currentText = 0
 const allTexts = [
   {
     id: 1,
@@ -28,6 +32,7 @@ const allTexts = [
   },
 ];
 
+
 //textni ozgartirish funksiyasi
 function StopText() {}
 btnChangeText.addEventListener("click", () => {});
@@ -39,6 +44,7 @@ let arr = text.split("").map((value) => {
   return "<span class='text-chars'>" + value + "</span>";
 });
 mainText.innerHTML += arr.join("");
+
 
 let incorrectLetters = 0;
 //sozlarni hioblovchi funksiya
@@ -67,9 +73,28 @@ timer.textContent = `${count}s`;
 selectTime.addEventListener("change", (e) => {
   count = e.target.value * 1 * 60;
   // console.log(count);
-  
   timer.textContent = `${count}s`;
 });
+
+const option = document.querySelector('#option');
+const medium = document.querySelector('#medium');
+const easy = document.querySelector('#easy');
+// medium.textContent = allTexts[currentText+1].text
+// var textoption = allTexts[currentText].text
+// mainText.textContent = textoption;
+// selectText.addEventListener('change',(even) =>{
+// })
+
+// allTexts.forEach((textss) =>{
+//   option.setAttribute('value',textss.id)
+//   if (textss.id === 1) {
+//      mainText.textContent = textss.text;
+//      mainText.appendChild(option);
+//   }else if(textss.id === 2){
+//     mainText.textContent = textss.text
+//     mainText.appendChild(option);
+//   }
+// })
 
 
 
@@ -78,15 +103,19 @@ function CountTime() {
     if (count > 0) {
       count--;
     } else if (count === 0) {
-      let texta =
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit sapiente inventore aperiam nesciunt voluptatibus ducimus perferendis quis, numquam impedit harum.";
+      let texta = allTexts[currentText].text
+        // "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit sapiente inventore aperiam nesciunt voluptatibus ducimus perferendis quis, numquam impedit harum.";
       let counterr = 0;
 
       for (let i = 0; i < typetext.length; i++) {
         if (texta[i] !== typetext[i]) counterr++;
       }
-      result.style.display = "initial";
-      accuracy.innerHTML = `(${Math.floor((counterr / 169) * 100)})%`;
+      result.style.opacity = 1
+      result.style.pointerEvents = 'auto'
+      btnChangeText.style.display = 'none'
+      btnStart.style.display = 'initial'
+      typingBox.style.display = 'none';
+      accuracy.innerHTML = `(${100-(Math.floor((counterr / 169) * 100))})%`;
       mistakes.innerHTML = `${counterr} ta`;
       correct.innerHTML = `${169 - counterr} ta`;
 
@@ -98,15 +127,34 @@ function CountTime() {
   }
   let inter = setInterval(intervalOwn, 1000);
 }
+
+
 btnStart.addEventListener("click", () => {
   CountTime();
   textareaUser.removeAttribute("disabled");
+  textareaUser.style.backgroundColor = 'yellow';
+  btnChangeText.style.display = 'initial'
+  btnStart.style.display = 'none'
+  accuracy.innerHTML = `(${100-(Math.floor((counterr / 169) * 100))})%`;
+  mistakes.innerHTML = `${counterr} ta`;
+  correct.innerHTML = `${169 - counterr} ta`;
+  // btnStart.textContent = 'Stop Game';
 });
+
+btnChangeText.addEventListener('click',() =>{
+  // result.style.display = 'initial'
+  btnStart.style.display = 'initial'
+  result.style.opacity = 1
+  result.style.pointerEvents = 'auto'
+  // playGame.style.display = 'none'
+  typingBox.style.display = 'none';
+})
+
 
 var typetext = "";
 textareaUser.addEventListener("input", (e) => {
   typetext = e.target.value;
-  if (typetext.length === 169) {
+  if (typetext.length === allTexts[currentText].text.length) {
     textareaUser.setAttribute("disabled", "");
   }
 });
@@ -114,7 +162,19 @@ textareaUser.addEventListener("input", (e) => {
 //=======================================================================================>>
 
 start.addEventListener("click", () => {
-  main.style.display = "none";
+  // main.style.display = "none";
+  main.style.opacity = 0;
+  main.style.pointerEvents = 'none';
   typingBox.style.opacity = 1;
   typingBox.style.pointerEvents = "auto";
 });
+
+
+startAgain.addEventListener('click',() =>{
+  // result.style.opacity = 0
+  // result.style.pointerEvents = 'none';
+  // result.style.display = 'none';
+  // main.style.display = 'initial';
+  // main.style.opacity = 1
+  // main.style.pointerEvents = 'auto';
+})
