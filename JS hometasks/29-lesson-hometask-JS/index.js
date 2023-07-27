@@ -49,7 +49,6 @@ selectText.addEventListener("change", (e) => {
 // mainText.innerHTML += arr.join("");
 
 let incorrectLetters = 0;
-//sozlarni hioblovchi funksiya
 textareaUser.addEventListener("input", () => {
   let textChars = document.querySelectorAll(".text-chars");
   textChars = Array.from(textChars);
@@ -74,29 +73,13 @@ var count = 20;
 timer.textContent = `${count}s`;
 selectTime.addEventListener("change", (e) => {
   count = e.target.value * 1 * 60;
-  // console.log(count);
   timer.textContent = `${count}s`;
 });
 
 const option = document.querySelector("#option");
 const medium = document.querySelector("#medium");
 const easy = document.querySelector("#easy");
-// medium.textContent = allTexts[currentText+1].text
-// var textoption = allTexts[currentText].text
-// mainText.textContent = textoption;
-// selectText.addEventListener('change',(even) =>{
-// })
 
-// allTexts.forEach((textss) =>{
-//   option.setAttribute('value',textss.id)
-//   if (textss.id === 1) {
-//      mainText.textContent = textss.text;
-//      mainText.appendChild(option);
-//   }else if(textss.id === 2){
-//     mainText.textContent = textss.text
-//     mainText.appendChild(option);
-//   }
-// })
 
 function stop() {
   clearInterval(inter);
@@ -108,7 +91,6 @@ function CountTime() {
       count--;
     } else if (count === 0) {
       let texta = allTexts[currentText].text;
-      // "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit sapiente inventore aperiam nesciunt voluptatibus ducimus perferendis quis, numquam impedit harum.";
       let counterr = 0;
 
       for (let i = 0; i < typetext.length; i++) {
@@ -131,8 +113,6 @@ function CountTime() {
     timer.textContent = `${count}s`;
   }
   btnChangeText.addEventListener("click", () => {
-    // clearInterval(inter);
-    // result.style.display = 'initial'
     btnStart.style.display = "initial";
     result.style.opacity = 1;
     result.style.pointerEvents = "auto";
@@ -160,19 +140,10 @@ btnStart.addEventListener("click", () => {
   accuracy.innerHTML = `(${100 - Math.floor((counterr / 169) * 100)})%`;
   mistakes.innerHTML = `${counterr} ta`;
   correct.innerHTML = `${169 - counterr} ta`;
-  // btnStart.textContent = 'Stop Game';
+  // intervalOwn()
 });
 
-// btnChangeText.addEventListener("click", () => {
-//   // clearInterval(inter);
-//   // result.style.display = 'initial'
-//   btnStart.style.display = "initial";
-//   result.style.opacity = 1;
-//   result.style.pointerEvents = "auto";
-//   // playGame.style.display = 'none'
-//   typingBox.style.display = "none";
-//   // stop();
-// });
+
 
 var typetext = "";
 textareaUser.addEventListener("input", (e) => {
