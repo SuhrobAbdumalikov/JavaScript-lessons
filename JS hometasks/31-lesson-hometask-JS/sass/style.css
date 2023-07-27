@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: black;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .timerInputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background-color: blue;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px #888;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+.container .timerInputs .timess {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container .timerInputs .timess input {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  font-size: 35px;
+}
+.container .timerInputs .timess label {
+  font-size: 20px;
+  margin-top: 10px;
+}
+.container .timerInputs button {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  background-color: yellow;
+  font-size: 17px;
+  transition: all 0.2s ease;
+}
+.container .timerInputs button:active {
+  transform: scale(0.95);
+}
+.container .timerInputs button:hover {
+  opacity: 0.9;
+}
+.container .timesBox {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background-color: blue;
+  padding: 50px 70px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px #888;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.5s ease-in-out;
+}
+.container .timesBox .showTimeDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 50px;
+}
+.container .timesBox button {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  background-color: yellow;
+  font-size: 17px;
+  transition: all 0.2s ease;
+}
+.container .timesBox button:active {
+  transform: scale(0.95);
+}
+.container .timesBox button:hover {
+  opacity: 0.9;
+}
+.container .timesBox .start {
+  display: none;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sass/style.css" />
+    <title>Timer | Js</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="timerInputs">
+            <div class="hoursDiv timess">
+                <input type="number" id="hourEnter" max="23" min="0" value="0" />
+                <label for="hour">Hour</label>
+            </div>
+            <div class="minutesDiv timess">
+                <input type="number" id="minEnter" max="59" min="0" value="0" />
+                <label for="min">Minute</label>
+            </div>
+            <div class="secondsDiv timess">
+                <input type="number" id="secondEnter" max="59" min="0" value="0" />
+                <label for="second">Seconds</label>
+            </div>
+            <button class="btnSave">Save</button>
+        </div>
+        <div class="timesBox">
+            <div class="showTimeDiv">
+                <div class="time">
+                    <h2 class="hour">00</h2>
+                  </div>
+                  <span>:</span>
+                  <div class="time">
+                    <h2 class="minute">00</h2>
+                  </div>
+                  <span>:</span>
+                  <div class="time">
+                    <h2 class="seconds">00</h2>
+                  </div>
+            </div>
+              <button class="choose">Choose</button>
+              <button class="start">Start</button>
+              <button class="Reset">Reset</button>
+              <button class="Pause">Pause</button>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
