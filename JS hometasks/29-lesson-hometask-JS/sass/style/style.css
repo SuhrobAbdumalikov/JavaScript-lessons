@@ -254,9 +254,11 @@
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 .container .result #startAgain {
+  text-decoration: none;
   text-align: center;
   cursor: pointer;
   width: 150px;
+  font-size: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
