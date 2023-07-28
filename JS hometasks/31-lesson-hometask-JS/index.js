@@ -77,6 +77,9 @@ function CountTime() {
             minute.innerHTML = minute1 < 10 ? "0" + minute1 : minute1;
             seconds.innerHTML = seconds1 < 10 ? "0" + seconds1 : seconds1;
     }
+    btnPause.addEventListener('click',() =>{
+        clearInterval(Interval);
+    })
 
     let Interval = setInterval(timerInfo,1000);
 }
@@ -84,12 +87,6 @@ function CountTime() {
 
 btnStart.addEventListener('click',() =>{
     CountTime()
-    btnStart.setAttribute("disabled","");
-})
-
-
-btnPause.addEventListener('click',() =>{
-   clearInterval(); 
 })
 
 
