@@ -61,15 +61,18 @@ btnReset.addEventListener('click',() =>{
 
 function CountTime() {
     function timerInfo() {
-        let fulltime = hour1*3600 + minute1*60 + seconds1;
-        fulltime--;
-        if (fulltime === 0) {
-            clearInterval(Interval)
+        if (seconds1<=60&&seconds1>0) {
+            seconds1--;
+        }else if (seconds1 === 0 && minute1 <=60 && minute1 > 0) {
+            minute1--;
+            seconds1 = 59
+        }else if (seconds1 === 0 && minute1 == 0 && hour1 > 0) {
+            hour1--;
+            seconds1 = 59;
+            minute1 = 59;
+        }else if (seconds1 === 0 && minute1 === 0 && hour1 === 0) {
+            clearInterval(Interval);
         }
-
-            hour1 = Math.floor(fulltime / 3600);
-            minute1 = Math.floor(fulltime / 60) % 60;
-            seconds1 = Math.floor(fulltime % 60);
             hour.innerHTML = hour1 < 10 ? "0" + hour1 : hour1;
             minute.innerHTML = minute1 < 10 ? "0" + minute1 : minute1;
             seconds.innerHTML = seconds1 < 10 ? "0" + seconds1 : seconds1;
