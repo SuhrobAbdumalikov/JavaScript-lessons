@@ -30,8 +30,34 @@
 //         r[numbers[i]] = i
 //         if (r[n]) {
 //             return [r[n]+1,i+1]
-//         }        
+//         }
 //     }
 // }
 // console.log(foo(numbers1,target1));
 
+//===================================>> homework <<===============================
+
+const APi = fetch("https://jsonplaceholder.typicode.com/posts");
+const ul = document.querySelector("#ul");
+
+const res1 = (data) => {
+  if (!data.ok) {
+    throw new Error(`HTTP error! Status: ${data.status}`);
+  }
+  return data.json();
+};
+
+const res2 = (data) => {
+  ul.innerHTML = ""; 
+  data.forEach((data2) => {
+    const li = document.createElement("li");
+    li.textContent = data2.title;
+    ul.appendChild(li);
+  });
+};
+
+const reject = (res) => {
+  console.error(res);
+};
+
+APi.then(res1).then(res2).catch(reject);
