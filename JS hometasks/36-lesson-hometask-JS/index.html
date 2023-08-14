@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Currency App</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      #root {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 100vh;
+        /* background-color: black; */
+        /* width: 1200px; */
+      }
+      .currency-container{
+        width: 500px;
+        background-color: rgb(18, 90, 116);
+        height: 300px;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border-radius: 10px;
+      }
+      .currency-list {
+        width: 95%;
+        font-size: 25px;
+        display: flex;
+        overflow-x: scroll;
+        padding: 10px;
+        gap: 10px;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      .currency-list span {
+        background-color: #fff;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      input {
+        height: 100px;
+        width: 100%;
+        font-size: 50px;
+        outline: none;
+        border: none;
+        padding: 0 30px;
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+      .active {
+        background: blue !important;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <custom-currency from="0" fromBase="USD"></custom-currency>   
+      <custom-currency from="0" fromBase="RUB"></custom-currency>
+    </div>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>

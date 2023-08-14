@@ -1,0 +1,26 @@
+:root{
+    --background-light-color: #fff;
+    --background-dark-color: #000;
+    --text-light-color: #fff;
+    --text-dark-color: #000;
+}
+
+[theme='light']{
+    color-scheme: light;
+    --background-color: var(--background-light-color);
+    --text-color: var(--text-dark-color);
+}
+
+[theme='dark']{
+    color-scheme: dark;
+    --background-color: var(--background-dark-color);
+    --text-color: var(--text-light-color);
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
