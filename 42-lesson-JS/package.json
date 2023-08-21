@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "lodash-es": "^4.17.21",
+    "swiper": "^10.2.0"
+  }
+}
