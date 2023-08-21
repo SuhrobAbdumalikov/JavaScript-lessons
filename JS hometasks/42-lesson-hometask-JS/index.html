@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./sass/style.css" />
+    <title>Little Lemon</title>
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <div class="img">
+          <a href="#logo" id="logo"
+            ><img src="./images/logo.png" alt="logo"
+          /></a>
+        </div>
+        <ul>
+          <li><a href="#" id="home">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#images">Images</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="container">
+        <div class="orderSection">
+          <div class="leftTextSection">
+            <h1>Little Lemon</h1>
+            <h2>Chicago</h2>
+            <p>
+              We are a family owned Mediterraneran restaurant, focused on
+              traditional recipes servred with a modern twist.
+            </p>
+            <button class="orderBtn">
+              <a
+                href="http://127.0.0.1:5502/JS%20hometasks/42-lesson-hometask-JS/pages/reserve.html#"
+                >Reserve Table</a
+              >
+            </button>
+          </div>
+          <div class="rightImg">
+            <img src="./images/food-img.avif" alt="food-img" />
+          </div>
+        </div>
+        <div class="sliderSection">
+          <!-- Swiper -->
+          <div class="swiper mySwiper" id="images">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/lemon1.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/lemon2.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/lemon3.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/lemon4.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-button-next swipperBtn"></div>
+            <div class="swiper-button-prev swipperBtn"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footerImg">
+          <a href="#logo"><img src="./images/footer-img.png" alt="" /></a>
+        </div>
+        <div class="firstText">
+          <h2>Document Navigation</h2>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Reservations</a></li>
+            <li><a href="#">Order Online</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </div>
+        <div class="firstText">
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="#">Address</a></li>
+            <li><a href="#">Phone Number</a></li>
+            <li><a href="#">Email</a></li>
+          </ul>
+        </div>
+        <div class="firstText">
+          <h2>Social Media Links</h2>
+          <ul>
+            <li><a href="#">Address</a></li>
+            <li><a href="#">Phone Number</a></li>
+            <li><a href="#">Email</a></li>
+            <li><a href="#">Reservations</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>
