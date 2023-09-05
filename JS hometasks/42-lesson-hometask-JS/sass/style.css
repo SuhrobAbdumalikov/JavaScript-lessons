@@ -196,4 +196,10 @@ footer .container .firstText ul a:hover {
 }
 .ReserveSection .reserveBox button:hover {
   opacity: 0.9;
+}
+
+.swiper-pagination-bullet {
+  background-color: #f4ce14;
+  width: 15px;
+  height: 15px;
 }/*# sourceMappingURL=style.css.map */
